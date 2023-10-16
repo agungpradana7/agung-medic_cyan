@@ -1,1 +1,21 @@
 @import url(main.css);
+
+/* * {
+    outline: 1px solid red;
+} */
+
+img.img-thumbnail.pull-left {
+    margin: 10px;
+}
+
+.cta .cta-block .item p {
+
+    margin-top: 5%;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+span.rating {
+    margin-left: 15px;
+    margin-top: 10px;
+}

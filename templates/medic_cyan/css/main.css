@@ -1,6 +1,7 @@
 @import url("../plugins/font-awesome-4.7.0/css/font-awesome.min.css");
 @import url("../plugins/animate.min.css");
-@import url("../plugins/bootstrap.min.css");
+@import url('../../admin/bootstrap/css/bootstrap.min.css');
+@import url('../../admin/bootstrap/css/bootstrap-theme.min.css');
 @import url("../plugins/bootstrap-select.min.css");
 @import url("../plugins/jquery-ui/jquery-ui.css");
 @import url("../plugins/timePicker.css");
