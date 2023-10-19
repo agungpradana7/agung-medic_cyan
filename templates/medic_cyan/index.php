@@ -9,17 +9,38 @@
     <![endif]-->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
+
 </head>
 
 <body>
   <div class="page-wrapper">
 
-    <?php echo $sys->block_show('header'); ?> 
+    <?php echo $sys->block_show('header'); ?>
+
+    <section class="header-uper">
+        <div class="container clearfix">
+          <div class="logo">
+            <figure>
+              <a href="index.html">
+              <?php echo $sys->block_show('logo'); ?>
+              </a>
+            </figure>
+          </div>
+          <div class="right-side">
+          <?php echo $sys->block_show('right'); ?>
+          </div>
+        </div>
+      </section>
+
+
+
+
+    <?php echo $sys->block_show('top'); ?>
+
 
 
     <?php echo $sys->block_show('content_top'); ?>
-    
+
 
     <section class="cta">
       <div class="container">
@@ -38,7 +59,7 @@
     <?php echo $sys->block_show('content_bottom'); ?>
 
     <?php echo $sys->block_show('footer'); ?>
-    
+
 
   </div>
   <!--End pagewrapper-->
@@ -49,7 +70,7 @@
     <span class="icon fa fa-angle-up"></span>
   </div>
 
-  <script src="<?php echo _URL;?>templates/admin/bootstrap/js/bootstrap.min.js"></script>
+  <script src="<?php echo _URL; ?>templates/admin/bootstrap/js/bootstrap.min.js"></script>
   <!-- Google Map -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC72vZw-6tGqFyRhhg5CkF2fqfILn2Tsw"></script>
   <!-- <script src="/agung/templates/medic_cyan/plugins/google-map/gmap.js"></script> -->
