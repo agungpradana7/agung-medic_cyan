@@ -27,7 +27,7 @@
         </li>
       </ul>
       <div class="link-btn">
-        <a href="#" class="btn-style-one">Appoinment</a>
+        <a href="<?php echo is_url('contact/main') ?> " class="btn-style-one"><?php echo lang('Appoinment') ?></a>
       </div>
 </div>
 <?php

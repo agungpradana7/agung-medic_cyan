@@ -2,15 +2,13 @@
 
 if (!empty($config['is_link'])) {
 ?>
-    <div class="logo">
-        <figure>
-            <a href="<?php echo $output['link']; ?>" title="<?php echo $output['title']; ?>" <?php echo $output['attribute']; ?>>
-                <?php echo image($output['image'], $output['size'], 'alt="' . $output['title'] . '" title="' . $output['title'] . '"'); ?>
-            </a>
-        </figure>
-    </div>
+  <figure>
+    <a href="<?php echo $output['link']; ?>" title="<?php echo $output['title']; ?>" <?php echo $output['attribute']; ?>>
+      <?php echo image($output['image'], $output['size'], 'alt="' . $output['title'] . '" title="' . $output['title'] . '"'); ?>
+    </a>
+  </figure>
 <?php
 } else {
-    echo image($output['image'], $output['size'], 'alt="' . $output['title'] . '" title="' . $output['title'] . '"' . $output['attribute']);
+  echo image($output['image'], $output['size'], 'alt="' . $output['title'] . '" title="' . $output['title'] . '"' . $output['attribute']);
 }
 ?>

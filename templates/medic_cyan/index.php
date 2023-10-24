@@ -18,19 +18,15 @@
     <?php echo $sys->block_show('header'); ?>
 
     <section class="header-uper">
-        <div class="container clearfix">
-          <div class="logo">
-            <figure>
-              <a href="index.html">
-              <?php echo $sys->block_show('logo'); ?>
-              </a>
-            </figure>
-          </div>
-          <div class="right-side">
-          <?php echo $sys->block_show('right'); ?>
-          </div>
+      <div class="container clearfix">
+        <div class="logo">
+          <?php echo $sys->block_show('logo'); ?>
         </div>
-      </section>
+        <div class="right-side">
+          <?php echo $sys->block_show('right'); ?>
+        </div>
+      </div>
+    </section>
 
 
 
