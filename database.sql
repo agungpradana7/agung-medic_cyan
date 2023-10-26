@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Oct 24, 2023 at 10:34 AM
+-- Generation Time: Oct 26, 2023 at 09:51 AM
 -- Server version: 5.7.42-log
 -- PHP Version: 7.4.33
 
@@ -2100,7 +2100,7 @@ CREATE TABLE `bbc_user` (
 --
 
 INSERT INTO `bbc_user` (`id`, `group_ids`, `username`, `password`, `last_ip`, `last_ip_temp`, `last_login`, `last_login_temp`, `exp_checked`, `login_time`, `created`, `active`) VALUES
-(1, ',3,4,1,2,', 'admin', 'wh0Mcs9LgKTh52YN0wo2vcPP5MYfwI2PGdQkQdWD1B2bKtixm5wKWiTNNHBwn2yIDotDYtRO82x0BU+tDtzx+Q==', '::1', '::1', '2023-10-24 09:52:33', '2023-10-23 10:06:31', '2023-10-24 12:34:45', 32, '0000-00-00 00:00:00', 1),
+(1, ',3,4,1,2,', 'admin', 'wh0Mcs9LgKTh52YN0wo2vcPP5MYfwI2PGdQkQdWD1B2bKtixm5wKWiTNNHBwn2yIDotDYtRO82x0BU+tDtzx+Q==', '::1', '::1', '2023-10-25 10:55:56', '2023-10-24 09:52:33', '0000-00-00 00:00:00', 33, '0000-00-00 00:00:00', 1),
 (2, ',2,1,3,4,', 'danang@fisip.net', 'TgEUmC9hRFBWWgtQr+WJvgj+MRSNu1Lby9y4ixNtj4uSpm5jw6lF81z//hXRrRgraI0pi674xHoIjFPHv7qq6Q==', '127.0.0.1', '127.0.0.1', '2016-05-03 23:35:44', '2016-05-03 23:32:34', '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', 1);
 
 -- --------------------------------------------------------
@@ -2296,14 +2296,14 @@ CREATE TABLE `imageslider` (
 
 INSERT INTO `imageslider` (`id`, `cat_id`, `image`, `link`, `orderby`, `publish`) VALUES
 (1, 1, '4c4c675c0b71e.jpg', '', 10, 1),
-(2, 1, '4c4c677194c62.jpg', '', 9, 0),
-(3, 1, '4c4c678e57bd3.jpg', '', 8, 0),
-(4, 1, '4c4c679a89547.jpg', '', 7, 0),
-(5, 1, '4c4c67c972711.jpg', '', 6, 0),
-(6, 1, '4c4c67e41e84b.jpg', '', 5, 0),
-(7, 1, '4c4c67ffca2e0.jpg', '', 4, 0),
-(8, 1, '4c4c681035682.jpg', '', 3, 0),
-(9, 1, '4c4c681f6ea08.jpg', '', 2, 0),
+(2, 1, '4c4c677194c62.jpg', '', 9, 1),
+(3, 1, '4c4c678e57bd3.jpg', '', 8, 1),
+(4, 1, '4c4c679a89547.jpg', '', 7, 1),
+(5, 1, '4c4c67c972711.jpg', '', 6, 1),
+(6, 1, '4c4c67e41e84b.jpg', '', 5, 1),
+(7, 1, '4c4c67ffca2e0.jpg', '', 4, 1),
+(8, 1, '4c4c681035682.jpg', '', 3, 1),
+(9, 1, '4c4c681f6ea08.jpg', '', 2, 1),
 (10, 1, '4c4c682aaf7a1.jpg', '', 1, 1);
 
 -- --------------------------------------------------------
@@ -2335,6 +2335,7 @@ INSERT INTO `imageslider_cat` (`id`, `title`, `width`, `height`) VALUES
 CREATE TABLE `imageslider_text` (
   `imageslider_id` int(255) NOT NULL,
   `title` varchar(255) NOT NULL DEFAULT '',
+  `description` text,
   `lang_id` int(255) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -2342,17 +2343,17 @@ CREATE TABLE `imageslider_text` (
 -- Dumping data for table `imageslider_text`
 --
 
-INSERT INTO `imageslider_text` (`imageslider_id`, `title`, `lang_id`) VALUES
-(1, 'Gedung', 1),
-(2, 'Praktikum', 1),
-(3, 'Kelas', 1),
-(4, 'Laboratorium', 1),
-(5, 'Praktek', 1),
-(6, 'Penyerahan Hadiah', 1),
-(7, 'Pengajaran', 1),
-(8, 'Belajar Kelompok', 1),
-(9, 'Perpustakaan', 1),
-(10, 'Wisuda', 1);
+INSERT INTO `imageslider_text` (`imageslider_id`, `title`, `description`, `lang_id`) VALUES
+(1, 'Gedung', NULL, 1),
+(2, 'Praktikum', NULL, 1),
+(3, 'Kelas', NULL, 1),
+(4, 'Laboratorium', NULL, 1),
+(5, 'Praktek', NULL, 1),
+(6, 'Penyerahan Hadiah', NULL, 1),
+(7, 'Pengajaran', NULL, 1),
+(8, 'Belajar Kelompok', NULL, 1),
+(9, 'Perpustakaan', NULL, 1),
+(10, 'Wisuda', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -3508,7 +3509,7 @@ ALTER TABLE `guestbook_field`
 -- AUTO_INCREMENT for table `imageslider`
 --
 ALTER TABLE `imageslider`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `imageslider_cat`

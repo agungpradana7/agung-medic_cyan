@@ -10,24 +10,6 @@
         <?php
         unset($config['template'], $config['open_hours']);
         foreach ($config as $key => $links) {
-          // pr($key);
-          switch ($config) {
-            case ('facebook'):
-              echo '<i class="fa fa-facebook" aria-hidden="true"></i>';
-              break;
-            case ('twitter'):
-              echo '<i class="fa fa-twitter" aria-hidden="true"></i>';
-              break;
-            case ('google-plus'):
-              echo '<i class="fa fa-google-plus" aria-hidden="true"></i>';
-              break;
-            case ('instagram'):
-              echo '<i class="fa fa-instagram" aria-hidden="true"></i>';
-              break;
-            case ('pinterest-p'):
-              echo '<i class="fa fa-pinterest-p" aria-hidden="true"></i>';
-              break;
-          }
         ?>
           <li>
             <a href="<?php echo $links ?>">

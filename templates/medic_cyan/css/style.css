@@ -19,11 +19,11 @@ span.rating {
     margin-top: 10px;
 }
 
-.navbar .navbar-nav li.active ul.dropdown-menu a {
+.navbar .navbar-nav li ul.dropdown-menu a {
     color: #48bdc5; 
 }
 
-.navbar .navbar-nav li ul.dropdown-menu li a:hover {
-    background-color: #48bdc5; 
-    color: #fff;/* Warna teks saat dihover (misalnya merah) */
+.navbar .navbar-nav li ul.dropdown-menu a:hover {
+    background: #48bdc5;
+    color: #fff;
 }

@@ -14,19 +14,18 @@ function menu_home($menus, $y = '', $x = '', $level = -1) // $y = 'down' || 'top
 		if (empty($level)) {
 			$cls = !empty($y) ? ' nav-' . $y : '';
 			$cls .= !empty($x) ? ' nav-' . $x : '';
-			$out = '<nav class="navbar navbar-default"><div class="container"><div class="navbar-header"><div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"><ul class="nav navbar-nav">';
+			$out = '';
 			foreach ($menus as $menu) {
 				$sub = call_user_func(__FUNCTION__, $menu['child'], $y, $x, ++$level);
 				if (!empty($sub)) {
 					$act = in_array($menu['id'], $highlight) ? ' active' : '';
-					$out .= '<li class="active' . $act . '"><a role="button" data-toggle="dropdown" tabindex="-1" href="' . $menu['link'] . '" title="' . $menu['title'] . '">' . $menu['title'] . ' <b class="caret"></b></a>' . $sub . '</li>';
+					$out .= '<li class="' . $act . '"><a role="button" data-toggle="dropdown" tabindex="-1" href="' . $menu['link'] . '" title="' . $menu['title'] . '">' . $menu['title'] . ' <b class="caret"></b></a>' . $sub . '</li>';
 				} else {
 					$act = in_array($menu['id'], $highlight) ? ' class="active"' : '';
 					$out .= '<li' . $act . '><a href="' . $menu['link'] . '" title="' . $menu['title'] . '">' . $menu['title'] . '</a></li>';
 				}
 			}
-			$out .= '</div></ul></div></div></nav>';
-			$output = '<nav class="nav navbar-default' . $cls . '">' . $out . '</nav>';
+			$output = '<nav class="navbar navbar-default"><div class="container"><div class="navbar-header"><div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"><ul class="nav navbar-nav">' . $cls . '' . $out . '</div></ul></div></div></nav>';
 		} else {
 			$out = '';
 			foreach ($menus as $menu) {
