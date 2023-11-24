@@ -11,4 +11,3 @@ if (!empty($config['is_link'])) {
 } else {
   echo image($output['image'], $output['size'], 'alt="' . $output['title'] . '" title="' . $output['title'] . '"' . $output['attribute']);
 }
-?>
