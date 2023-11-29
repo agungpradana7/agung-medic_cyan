@@ -22,7 +22,7 @@ if (!empty($cat['list']) && is_array($cat['list'])) {
               <div class="contents text-center">
                 <h4><?php echo $data['title'] ?></h4>
                 <p><?php echo $data['content'] ?></p>
-                <a href="#" class="btn btn-main"><?php echo lang('read more') ?></a>
+                <a href="<?php echo content_link($item['id'], $item['title']) ?>" class="btn btn-main"><?php echo lang('read more') ?></a>
               </div>
             </div>
           </div>

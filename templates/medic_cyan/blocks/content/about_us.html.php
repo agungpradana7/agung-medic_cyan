@@ -49,7 +49,7 @@
                         <i class="fa fa-dot-circle-o"></i><?php echo lang('Teeth cleaning is part of oral hygiene and involves') ?>
                       </li>
                     </ul>
-                    <a href="#" class="btn btn-style-one"><?php echo lang('Read more') ?></a>
+                    <a href="<?php echo content_link($item['id'], $item['title']) ?>" class="btn btn-style-one"><?php echo lang('Read more') ?></a>
                   </div>
                 </div>
               </div>

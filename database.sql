@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 24, 2023 at 12:23 PM
+-- Generation Time: Nov 29, 2023 at 12:27 PM
 -- Server version: 5.7.42-log
 -- PHP Version: 7.4.33
 
@@ -109,6 +109,14 @@ CREATE TABLE `bbc_alert` (
   `updated` datetime DEFAULT '0000-00-00 00:00:00',
   `created` datetime DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Jika ingin me-notif semua member dalam suatu group maka harus memasukkan satu2 tiap user_id dalam group tersebut, karena jika mengunakan group_id maka jika salah satu user dalam group_id tsb membuka maka alert untuk yg lain akan hilang';
+
+--
+-- Dumping data for table `bbc_alert`
+--
+
+INSERT INTO `bbc_alert` (`id`, `user_id`, `group_id`, `module`, `title`, `description`, `params`, `is_open`, `is_admin`, `updated`, `created`) VALUES
+(1, 1, 0, 'content', 'Comment:: Dermaga Batubara Terbesar', '@Tuti : iya', '{\"name\":\"gofud+gang\",\"email\":\"gofudgang%40gmail.com\",\"website\":\"\",\"content\":\"%40Tuti+%3A+iya\",\"token\":\"6NG8hi%2FuNu8jbu8oMFljzlLJ5RtEEBNTfJHWQazJsAHjS%2FpmylwJiKnoBxtf%2B4JcROWcU77Y8dyU80SXoXvR77ujf4baV0Lz%2BWjvP2OZi3MDCCjGgp8IObACVQCJH8tfsANbO8a985Z1f6miPgVi0XHspuZcD4jtyhsa88oaoMVwSjB4b8dX8GM%2FPaVtrZBPya0mlwW%2FQWPWdNcH%2FqOXM3K5kUEApVpj1k72IUYLibReAMpTi0Lfb6dqrqToahEaXv%2FFkj1cKDnpWMgX88gOeuSxuRKQKKNrGVvuPXrsw5pxMQCLjMkzF6Jo6kxRI7AzOs98zdm4gLhD0Ogd7DcdkPgcleGL0TJxIIzgZVPOJBRpgK%2BNcp69kgszF030IMGYXzrNQ9rPzW5fIwzQJlfuCH%2FpTRlXY%2Be2Q1%2FUYRj972L1bjrUOhDUs4y7QiBXIV%2B6ZSJ%2FzyfWUfMjC3sff5ZgT13htELskuIuDhHwlCLTWnCJ9pDNmrijfLqGvLMlHG%2B8SxhBSwkO1tQ1a4NSKk2h%2BcHIjDF6DCbi4E03gHMUqRadGsPecMLJlUmhh9GVsTlpZ9kFdV7nsrEiP4HeeZTkcw3JwDsNUwKRVrTijpvhfwxFgGK6OBMd%2FAuqxpCDxmht60skrCdp1A%2FxZFsqZVn8uzWntxK%2BpK0T1ooFPsm9noJ%2BJ36%2BotTpN4Vnvex3TyEIk8XPEF3nNaFboK6J9ZVcIWj87e0L7F1%2FdKLyV3qkYQEObKdYHmOyW1XC0wPUW4KJDwiWSUMsXAdun9iwWKiWGq8wWeqwPUtCkbAjN%2FkUR08%3D\",\"par_id\":\"36\",\"user_id\":0,\"image\":\"https%3A%2F%2Flh3.googleusercontent.com%2Fa%2FACg8ocJwwINYJvsGv0x2S-we0j5ph36j3Fxz5yhYfpR3VvJ9XA%3Ds96-c\",\"id\":\"43\",\"link\":\"http%3A%2F%2Flocalhost%2Fagung%2Fdermaga-batubara-terbesar_35.htm\",\"url\":\"http%3A%2F%2Flocalhost%2Fagung%2Fdermaga-batubara-terbesar_35.htm\",\"url_admin\":\"index.php%3Fmod%3Dcontent.comment_edit%26id%3D43\"}', 1, 3, '2023-11-28 10:15:46', '2023-11-28 09:40:43'),
+(2, 1, 0, 'content', 'Comment:: Garuda Buka Rute Surabaya', 'halo', '{\"name\":\"gofud+gang\",\"email\":\"gofudgang%40gmail.com\",\"website\":\"\",\"content\":\"halo\",\"token\":\"e%2BVoxrM7y66Lrk0GeXpXsT7GDYKIy1qrBd6GKZJwys3gFvCKtdqg5zMHuWHJGhm%2BXTkDTXAB3okcVonEDx0nGBF7TygSFRyTnKpcEXasOCQBJrZ3w9GuOD4RNifc1jbyudoNIX17%2FyhS8cpH0H8z%2FkQZkvxMVDSe%2FdjXU%2B%2BC5gB6%2Fd9NRcGgXj3RP4c%2BqMJNrKiNCczJl2S7TeU0VeKbyxIW%2FRSGVctB%2Bk%2BvXNEoWF1eIv%2Bd2GoMOtALfRcs%2BCObr%2Bwac4cDDQF999MFVCU4uqmXsfA81Yr1t9jCJFUDpyPQvR18YrQSGSRiTaBOoSHqJ5GMAbGSdU3I1E0X3K%2FddnHj%2FC2d8PzvLYPHjPaOj%2FuHAF5ohkyP%2BTAwHAl2hrWSeliruodnUHGN4o61MecoNskQxTuygGSewZYrKnql8FY2%2FxfqcJzdVvBP8sQ%2B%2BlZclqysMZhYjHWXde22AprXifPiHkdGUsmf%2FAyEQbqqd2REOys9r81RlDk0wkig2IpbDCfZCeJqK2sYzX5dnAZ3OodxI6%2B%2FcLeUPFrBckJBFiTkY0jqbN8CUqtQUnzhL2MDnfcr0bMy4Cn4LwjrHL%2Ffh3qxZxpAPZ4hY%2ByTn1o9pKKbIJ9iDu7SrKrOH4YuXCyDglJwEUrLy5xmKfG5BQJzouthsjDzKCXiXSdw2bvZw64P%2Ba4%2FGwQC8I40r73%2B2gAN0EZ130VZppe3bKJ3BuXfXe8DQmVWhL%2F%2Ft0s8Gz4xd0XjErwL5siKGHZLJlJwg5M%2Bj7KwBhD68jYMtks5%2FJBxEKzQSNBlR4z8f2XbrX8jBP8%3D\",\"par_id\":\"0\",\"user_id\":0,\"image\":\"https%3A%2F%2Flh3.googleusercontent.com%2Fa%2FACg8ocJwwINYJvsGv0x2S-we0j5ph36j3Fxz5yhYfpR3VvJ9XA%3Ds96-c\",\"id\":\"44\",\"link\":\"http%3A%2F%2Flocalhost%2Fagung%2Fgaruda-buka-rute-surabaya_38.htm\",\"url\":\"http%3A%2F%2Flocalhost%2Fagung%2Fgaruda-buka-rute-surabaya_38.htm\",\"url_admin\":\"index.php%3Fmod%3Dcontent.comment_edit%26id%3D44\"}', 1, 3, '2023-11-28 10:15:46', '2023-11-28 09:41:05');
 
 -- --------------------------------------------------------
 
@@ -264,10 +272,12 @@ INSERT INTO `bbc_block` (`id`, `template_id`, `block_ref_id`, `position_id`, `sh
 (155, 7, 14, 8, 0, '', 0, 37, ',all,', ',all,', '', '', '', '{\"template\":\"imageslider_home\",\"cat_id\":\"1\"}', 1, 1),
 (156, 7, 10, 3, 0, '', 0, 37, ',all,', ',all,', '', '', '', '{\"template\":\"menu-home\",\"cat_id\":\"1\",\"submenu\":\"bottom+right\"}', 1, 1),
 (163, 7, 6, 2, 0, '', 0, 37, ',all,', ',all,', '', '', '', '{\"template\":\"appoinment\",\"caption\":\"info%40medic.com+%7C+%2B+%2888017%29+-+123+-+4567\"}', 1, 1),
-(170, 7, 14, 9, 0, '', 0, 37, ',all,', ',all,', '', '', '', '{\"template\":\"testimonial\",\"cat_id\":\"1\"}', 5, 1),
+(179, 7, 13, 9, 0, '', 0, 37, ',all,', ',all,', '', '', '', '{\"template\":\"form\",\"limit\":\"2\",\"avatar\":\"1\",\"orderby\":\"1\",\"readmore\":\"0\"}', 6, 1),
 (172, 7, 3, 9, 0, '', 0, 37, ',all,', ',all,', '', '', '', '{\"template\":\"team\",\"kind_id\":\"-1\",\"type_id\":\"1\",\"cat_id\":\"1\",\"ids\":\"\",\"popular\":\"\",\"limit_title\":\"75\",\"limit_title_by\":\"char\",\"title\":\"0\",\"title_link\":\"0\",\"intro\":\"intro\",\"created\":\"0\",\"modified\":\"0\",\"author\":\"0\",\"tag\":\"0\",\"tag_link\":\"0\",\"rating\":\"0\",\"read_more\":\"0\",\"tot_list\":\"3\",\"thumbnail\":\"0\"}', 4, 1),
-(174, 7, 18, 6, 0, '', 0, 37, ',all,', ',all,', '', '', '', '{\"template\":\"footer_home\",\"location\":\"Kudus%2C+Jawa+Tengah%2C+Indonesia\",\"email\":\"skuy%40medic.com\",\"phone_number\":\"%2B6269235035\",\"facebook\":\"https%3A%2F%2Fwww.facebook.com%2F\",\"twitter\":\"https%3A%2F%2Ftwitter.com%2F\",\"linkedin\":\"https%3A%2F%2Fid.linkedin.com%2F\",\"vimeo\":\"https%3A%2F%2Fvimeo.com%2F\"}', 1, 1),
-(177, 7, 2, 9, 0, '', 0, 37, ',all,', ',all,', '', '', '', '{\"template\":\"contact_home\",\"type\":\"default\"}', 6, 1),
+(174, 7, 18, 6, 0, '', 0, 37, ',all,', ',all,', '', '', '', '{\"template\":\"footer_home\",\"image\":\"images%2Fuploads%2Flogo-2.png\",\"description\":\"Lorem+ipsum+dolor+sit+amet+consectetur+adipisicing+elit.+Molestias%2C+temporibus%3F\",\"location\":\"Kudus%2C+Jawa+Tengah%2C+Indonesia\",\"email\":\"skuy%40medic.com\",\"phone_number\":\"%2B6269235035\",\"facebook\":\"https%3A%2F%2Fwww.facebook.com%2F\",\"twitter\":\"https%3A%2F%2Ftwitter.com%2F\",\"linkedin\":\"https%3A%2F%2Fid.linkedin.com%2F\",\"vimeo\":\"https%3A%2F%2Fvimeo.com%2F\"}', 1, 1),
+(178, 7, 13, 9, 0, '', 0, 37, ',all,', ',all,', '', '', '', '{\"template\":\"testimonial_home\",\"limit\":\"5\",\"avatar\":\"1\",\"orderby\":\"1\",\"readmore\":\"0\"}', 5, 1),
+(180, 7, 10, 6, 0, '', 0, 37, ',all,', ',all,', '', '', '', '{\"template\":\"footer-menu\",\"cat_id\":\"1\",\"submenu\":\"bottom+right\"}', 2, 1),
+(182, 7, 3, 6, 0, '', 0, 37, ',all,', ',all,', '', '', '', '{\"template\":\"footer-content\",\"kind_id\":\"-1\",\"type_id\":\"1\",\"cat_id\":\"1\",\"ids\":\"\",\"popular\":\"\",\"limit_title\":\"75\",\"limit_title_by\":\"char\",\"title\":\"0\",\"title_link\":\"0\",\"intro\":\"intro\",\"created\":\"0\",\"modified\":\"0\",\"author\":\"0\",\"tag\":\"0\",\"tag_link\":\"0\",\"rating\":\"0\",\"read_more\":\"0\",\"tot_list\":\"2\",\"thumbnail\":\"0\"}', 4, 1),
 (171, 7, 14, 9, 0, '', 0, 37, ',all,', ',all,', '', '', '', '{\"template\":\"service\",\"cat_id\":\"1\"}', 3, 1),
 (160, 7, 17, 5, 0, '', 0, 37, ',all,', ',all,', '', '', '', '{\"template\":\"\",\"open_hours\":\"Opening+Hours+%3A+Saturday+to+Tuesday+-+8am+to+11pm\",\"facebook\":\"https%3A%2F%2Fwww.facebook.com%2F\",\"twitter\":\"https%3A%2F%2Ftwitter.com%2F\",\"google-plus\":\"https%3A%2F%2Fwww.google.com%2F\",\"instagram\":\"https%3A%2F%2Fwww.instagram.com%2F\",\"pinterest-p\":\"https%3A%2F%2Fid.pinterest.com%2F\"}', 1, 1),
 (176, 7, 3, 9, 0, '', 0, 37, ',all,', ',all,', '', '', '', '{\"template\":\"about_us\",\"kind_id\":\"-1\",\"type_id\":\"1\",\"cat_id\":\"1\",\"ids\":\"\",\"popular\":\"\",\"limit_title\":\"75\",\"limit_title_by\":\"char\",\"title\":\"0\",\"title_link\":\"1\",\"intro\":\"intro\",\"created\":\"0\",\"modified\":\"0\",\"author\":\"0\",\"tag\":\"0\",\"tag_link\":\"0\",\"rating\":\"0\",\"read_more\":\"0\",\"tot_list\":\"3\",\"thumbnail\":\"0\"}', 2, 1),
@@ -476,13 +486,15 @@ INSERT INTO `bbc_block_text` (`block_id`, `title`, `lang_id`) VALUES
 (119, 'Gallery', 1),
 (120, 'Gallery', 1),
 (121, 'User menu', 1),
-(176, 'about us ori', 1),
+(176, 'about us ', 1),
 (163, 'appoinment', 1),
-(170, 'testimonial', 1),
+(178, 'testimonial', 1),
+(179, 'contact ', 1),
 (172, 'team', 1),
-(177, 'contact ori', 1),
-(171, 'service ori', 1),
-(174, 'footer ori', 1),
+(180, 'footer mid', 1),
+(171, 'service ', 1),
+(182, 'footer bottom', 1),
+(174, 'footer top', 1),
 (155, 'image slider', 1),
 (169, 'features', 1),
 (160, 'sosmed', 1),
@@ -628,7 +640,7 @@ CREATE TABLE `bbc_content` (
 --
 
 INSERT INTO `bbc_content` (`id`, `par_id`, `type_id`, `kind_id`, `file`, `file_url`, `file_format`, `file_type`, `file_register`, `file_hit`, `file_hit_time`, `file_hit_ip`, `video`, `audio`, `image`, `caption`, `images`, `created`, `created_by`, `created_by_alias`, `modified`, `modified_by`, `revised`, `privilege`, `hits`, `rating`, `last_hits`, `is_popimage`, `is_front`, `is_config`, `config`, `publish`) VALUES
-(1, 0, 1, 0, '', '', '', 0, 0, 0, '0000-00-00 00:00:00', '', '', '', 'home-page.jpg', '', '', '2016-05-04 03:11:39', 1, 'Administrator', '2016-05-04 03:11:39', 1, 16, ',all,', 608, '0,0,1,2,0', '2023-11-14 11:08:41', 1, 1, 0, '', 1),
+(1, 0, 1, 0, '', '', '', 0, 0, 0, '0000-00-00 00:00:00', '', '', '', 'home-page.jpg', '', '', '2016-05-04 03:11:39', 1, 'Administrator', '2016-05-04 03:11:39', 1, 16, ',all,', 609, '0,0,1,2,0', '2023-11-27 15:09:36', 1, 1, 0, '', 1),
 (2, 0, 1, 1, '', '', '', 0, 0, 0, '0000-00-00 00:00:00', '', '', '', 'images/modules/content/2/alam-6.jpg', '', '[{\"image\":\"alam-6.jpg\",\"title\":\"\",\"description\":\"\"},{\"image\":\"alam-5.jpg\",\"title\":\"\",\"description\":\"\"},{\"image\":\"alam-4.jpg\",\"title\":\"\",\"description\":\"\"},{\"image\":\"alam-3.jpg\",\"title\":\"\",\"description\":\"\"},{\"image\":\"alam-2.jpg\",\"title\":\"\",\"description\":\"\"},{\"image\":\"alam-1.jpg\",\"title\":\"\",\"description\":\"\"}]', '2016-05-04 03:11:39', 1, 'Administrator', '2016-05-04 03:11:39', 1, 8, ',all,', 312, '0', '2016-05-25 00:04:32', 1, 0, 0, '', 1),
 (3, 0, 1, 1, '', '', '', 0, 0, 0, '0000-00-00 00:00:00', '', '', '', 'images/modules/content/3/art-2.jpg', '', '[{\"image\":\"art-2.jpg\",\"title\":\"\",\"description\":\"\"},{\"image\":\"art-6.jpg\",\"title\":\"\",\"description\":\"\"},{\"image\":\"art-5.jpg\",\"title\":\"\",\"description\":\"\"},{\"image\":\"art-4.jpg\",\"title\":\"\",\"description\":\"\"},{\"image\":\"art-3.jpg\",\"title\":\"\",\"description\":\"\"},{\"image\":\"art-1.jpg\",\"title\":\"\",\"description\":\"\"}]', '2016-05-04 03:11:39', 1, 'Administrator', '2016-05-04 03:11:39', 1, 6, ',all,', 38, '0', '2019-06-14 08:24:31', 1, 0, 0, '', 1),
 (4, 0, 1, 1, '', '', '', 0, 0, 0, '0000-00-00 00:00:00', '', '', '', 'images/modules/content/4/drone-6.jpg', '', '[{\"image\":\"drone-6.jpg\",\"title\":\"\",\"description\":\"\"},{\"image\":\"drone-5.jpg\",\"title\":\"\",\"description\":\"\"},{\"image\":\"drone-4.jpg\",\"title\":\"\",\"description\":\"\"},{\"image\":\"drone-3.jpg\",\"title\":\"\",\"description\":\"\"},{\"image\":\"drone-2.jpg\",\"title\":\"\",\"description\":\"\"},{\"image\":\"drone-1.jpg\",\"title\":\"\",\"description\":\"\"}]', '2016-05-04 03:11:39', 1, 'Administrator', '2016-05-04 03:11:39', 1, 10, ',all,', 312, '0', '2016-05-25 00:03:53', 0, 0, 0, '', 1),
@@ -641,7 +653,7 @@ INSERT INTO `bbc_content` (`id`, `par_id`, `type_id`, `kind_id`, `file`, `file_u
 (11, 0, 1, 4, '', '', '', 0, 0, 0, '0000-00-00 00:00:00', '', '', '87616772', 'https://i1.sndcdn.com/artworks-000045363067-gy0gm1-t500x500.jpg', '', '', '2016-05-04 03:11:39', 1, 'Administrator', '2016-05-04 03:11:39', 1, 12, ',all,', 301, '0', '2016-05-25 00:06:15', 1, 0, 0, '', 1),
 (12, 0, 1, 4, '', '', '', 0, 0, 0, '0000-00-00 00:00:00', '', '', '62576046', 'https://i1.sndcdn.com/artworks-000031744302-0730nk-t500x500.jpg', '', '', '2016-05-04 03:11:39', 1, 'Administrator', '2016-05-04 03:11:39', 1, 14, ',all,', 308, '0', '2016-05-03 21:07:17', 1, 0, 0, '', 1),
 (13, 0, 1, 4, '', '', '', 0, 0, 0, '0000-00-00 00:00:00', '', '', '24600650', 'https://i1.sndcdn.com/artworks-000012244956-xfjnke-t500x500.jpg', '', '', '2016-05-04 03:11:39', 1, 'Administrator', '2016-05-04 03:11:39', 1, 7, ',all,', 290, '0', '2016-05-25 00:05:15', 1, 0, 0, '', 1),
-(14, 0, 1, 0, '', '', '', 0, 0, 0, '0000-00-00 00:00:00', '', '', '', 'penandatanganan-bantuan-kapal-penyebrangan.jpg', 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC', '', '2016-05-04 03:11:39', 1, 'Administrator', '2016-05-04 03:11:39', 1, 12, ',all,', 289, '0', '2023-11-23 09:37:11', 1, 0, 0, '', 1),
+(14, 0, 1, 0, '', '', '', 0, 0, 0, '0000-00-00 00:00:00', '', '', '', 'penandatanganan-bantuan-kapal-penyebrangan.jpg', 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC', '', '2016-05-04 03:11:39', 1, 'Administrator', '2016-05-04 03:11:39', 1, 12, ',all,', 291, '0', '2023-11-29 12:19:43', 1, 0, 0, '', 1),
 (15, 0, 1, 0, '', '', '', 0, 0, 0, '0000-00-00 00:00:00', '', '', '', 'merevitalisasi-sektor-pelayaran.jpg', '', '', '2016-05-04 03:11:39', 1, 'Administrator', '2016-05-04 03:11:39', 1, 7, ',all,', 342, '0,0,0,0,1', '2016-04-15 18:49:27', 0, 0, 0, '', 1),
 (16, 0, 1, 0, '', '', '', 0, 0, 0, '0000-00-00 00:00:00', '', '', '', 'transportasi-yang-efisien.jpg', '', '', '2016-05-04 03:11:39', 1, 'Administrator', '2016-05-04 03:11:39', 1, 6, ',all,', 381, '0', '2015-09-03 02:36:44', 1, 0, 0, '', 1),
 (17, 0, 1, 0, '', '', '', 0, 0, 0, '0000-00-00 00:00:00', '', '', '', '8-langkah-hindari-kehilangan-mobil.jpg', '', '', '2016-05-04 03:11:39', 1, 'Administrator', '2016-05-04 03:11:39', 1, 8, ',all,', 404, '0', '2016-04-15 18:49:19', 0, 0, 0, '', 1),
@@ -661,11 +673,11 @@ INSERT INTO `bbc_content` (`id`, `par_id`, `type_id`, `kind_id`, `file`, `file_u
 (31, 0, 1, 0, '', '', '', 0, 0, 0, '0000-00-00 00:00:00', '', '', '', 'konektivitas-nusantara.jpg', '', '', '2016-05-04 03:11:39', 1, 'Administrator', '2016-05-04 03:11:39', 1, 18, ',all,', 40, '0', '2011-04-25 13:09:53', 1, 0, 0, '', 1),
 (32, 0, 1, 0, '', '', '', 0, 0, 0, '0000-00-00 00:00:00', '', '', '', 'membumikan-transportasi-ke-ranah-lokal.jpg', '', '', '2016-05-04 03:11:39', 1, 'Administrator', '2016-05-04 03:11:39', 1, 5, ',all,', 117, '0', '2016-04-16 04:03:32', 0, 0, 0, '', 0),
 (33, 0, 1, 0, '', '', '', 0, 0, 0, '0000-00-00 00:00:00', '', '', '', 'nikmat-teh-di-pasar-terapung.jpg', '', '', '2016-05-04 03:11:39', 1, 'Administrator', '2016-05-04 03:11:39', 1, 7, ',all,', 314, '0', '2016-04-15 23:24:10', 1, 0, 0, '', 1),
-(34, 0, 1, 0, '', '', '', 0, 0, 0, '0000-00-00 00:00:00', '', '', '', 'tol-semakin-dikebut.jpg', '', '', '2016-05-04 03:11:39', 1, 'Administrator', '2016-05-04 03:11:39', 1, 12, ',all,', 389, '0', '2012-03-15 02:57:55', 1, 0, 0, '', 1),
-(35, 0, 1, 0, '', '', '', 0, 0, 0, '0000-00-00 00:00:00', '', '', '', 'images/modules/content/images/p_indahnya-indonesia-dengan-menyelam.jpg', '', '', '2016-05-04 03:11:39', 1, 'Administrator', '2023-11-20 10:33:46', 1, 7, ',all,', 323, '0', '2016-04-15 18:48:35', 0, 0, 0, '', 1),
-(36, 0, 1, 0, '', '', '', 0, 0, 0, '0000-00-00 00:00:00', '', '', '', 'images/modules/content/images/p_apa-kabar-sistranas.jpg', '', '', '2016-05-04 03:11:39', 1, 'Administrator', '2023-11-20 10:33:27', 1, 12, ',all,', 409, '0', '2015-09-09 10:08:33', 1, 0, 0, '', 1),
-(37, 0, 1, 0, '', '', '', 0, 0, 0, '0000-00-00 00:00:00', '', '', '', 'images/modules/content/images/p_membumikan-transportasi-ke-ranah-lokal.jpg', '', '', '2016-05-04 03:11:39', 1, 'Administrator', '2023-11-17 14:19:59', 1, 19, ',all,', 211, '0', '2018-10-24 07:19:44', 1, 0, 0, '', 1),
-(38, 0, 1, 0, '', '', '', 0, 0, 0, '0000-00-00 00:00:00', '', '', '', 'images/modules/content/images/p_keselamatan-harus-jadi-icon.jpg', '', '', '2016-05-04 03:11:39', 1, 'Administrator', '2023-11-20 10:32:07', 1, 60, ',all,', 189, '0,0,0,1,0', '2023-11-14 11:22:15', 1, 0, 0, '', 1);
+(34, 0, 1, 0, '', '', '', 0, 0, 0, '0000-00-00 00:00:00', '', '', '', 'tol-semakin-dikebut.jpg', '', '', '2016-05-04 03:11:39', 1, 'Administrator', '2016-05-04 03:11:39', 1, 12, ',all,', 390, '0', '2023-11-27 15:12:06', 1, 0, 0, '', 1),
+(35, 0, 1, 0, '', '', '', 0, 0, 0, '0000-00-00 00:00:00', '', '', '', 'images/modules/content/images/p_indahnya-indonesia-dengan-menyelam.jpg', '', '', '2016-05-04 03:11:39', 1, 'Administrator', '2023-11-20 10:33:46', 1, 7, ',all,', 324, '0', '2023-11-28 09:40:13', 0, 0, 0, '', 1),
+(36, 0, 1, 0, '', '', '', 0, 0, 0, '0000-00-00 00:00:00', '', '', '', 'images/modules/content/images/p_apa-kabar-sistranas.jpg', '', '', '2016-05-04 03:11:39', 1, 'Administrator', '2023-11-20 10:33:27', 1, 12, ',all,', 410, '0', '2023-11-27 15:18:44', 1, 0, 0, '', 1),
+(37, 0, 1, 0, '', '', '', 0, 0, 0, '0000-00-00 00:00:00', '', '', '', 'images/modules/content/images/p_membumikan-transportasi-ke-ranah-lokal.jpg', '', '', '2016-05-04 03:11:39', 1, 'Administrator', '2023-11-17 14:19:59', 1, 19, ',all,', 212, '0', '2023-11-27 15:17:32', 1, 0, 0, '', 1),
+(38, 0, 1, 0, '', '', '', 0, 0, 0, '0000-00-00 00:00:00', '', '', '', 'images/modules/content/images/p_keselamatan-harus-jadi-icon.jpg', '', '', '2016-05-04 03:11:39', 1, 'Administrator', '2023-11-20 10:32:07', 1, 60, ',all,', 191, '0,0,0,1,0', '2023-11-28 09:39:48', 1, 0, 0, '', 1);
 
 -- --------------------------------------------------------
 
@@ -942,13 +954,15 @@ INSERT INTO `bbc_content_comment` (`id`, `par_id`, `user_id`, `reply_all`, `repl
 (33, 0, 0, 0, 0, 36, 'Belawan Terus Berbenah', 'rindy', 'http://graph.facebook.com/100000302388141/picture', 'rfriezca@yahoo.com', '', 'bwt pendaftarn tahun 2011\nkpn yah!!!!', '2010-11-23 19:19:22', 1),
 (34, 0, 0, 0, 0, 10, 'Sample Youtube Video Tiga', 'rahma', 'http://graph.facebook.com/100001533960031/picture', 'rahmaflayyer@yahoo.com', '', 'kalau mahasiswanya tidak adrama, apakah diperbolehkan????', '2010-11-26 11:22:36', 1),
 (35, 0, 0, 0, 0, 14, 'Sample Content Detail', 'rahma', 'http://graph.facebook.com/100001533960031/picture', 'rahmaflayyer@yahoo.com', '', 'ini dah bulan november...\npendaftaran masih buka kan????', '2010-11-26 11:26:34', 1),
-(36, 0, 0, 0, 0, 35, 'Dermaga Batubara Terbesar', 'Tuti', 'http://graph.facebook.com/100003894631547/picture', 'tutyclara@ymail.com', '', 'umch bagus juga,,,,', '2010-11-30 10:06:58', 1),
+(36, 0, 0, 1, 1, 35, 'Dermaga Batubara Terbesar', 'Tuti', 'http://graph.facebook.com/100003894631547/picture', 'tutyclara@ymail.com', '', 'umch bagus juga,,,,', '2010-11-30 10:06:58', 1),
 (37, 0, 0, 0, 0, 14, 'Sample Content Detail', 'lia', 'http://graph.facebook.com/100000083907730/picture', 'hakeshy_hatsuden@yahoo.co.id', '', ' =; maaf, saya lulusan smk pariwisata apakah bisa mendaftar?\nterimakasih.', '2010-11-30 22:10:29', 1),
 (38, 0, 0, 0, 0, 36, 'Belawan Terus Berbenah', 'mita', 'http://graph.facebook.com/100010192572668/picture', 'mita_kissing@yahoo.com', '', 'apa gag ada saringan masuknya menggunakan PMDK????', '2010-12-03 12:35:30', 1),
 (39, 0, 0, 0, 0, 34, 'Tol Semakin Dikebut', 'hendrikawati ', 'http://graph.facebook.com/100002013531460/picture', 'rickacipoet@yahoo.com', '', 'kapan nih penerimaan beasiswa diknas tahun 2010. 28 sept 2010 kemarin kan udah sosialisasi di diknas.. tapi kok lum ada juga pengumuman lagi. ten-temen yang dapat beasiswa pada bertnya-tanya ni.. :(( ', '2010-12-04 17:44:10', 1),
 (40, 0, 0, 0, 0, 16, 'Transportasi Yang Efisien', 'ajeng', 'http://graph.facebook.com/100000213226955/picture', 'ajen9m0et_morfabregas@yahoo.com', '', 'sy mau tanya,apa akadibyo ini ada kerjasama dg Rumah sakit2? kira2 mana saja? n apakah lulusan akadibyo terjamin pkerjaannya? misalkan di transfer ke RS? Dan apakah ada program magang di rumah sakit?  sy mnta tolong di balas via email saja dan dikirimkan total biaya selama pendidikan. terimakasih', '2010-12-09 20:23:09', 1),
 (41, 0, 0, 0, 0, 14, 'Sample Content Detail', 'tusi', 'http://graph.facebook.com/100001636105240/picture', 'thoesiygemini@yahoo.co.id', '', 'klo dr akuntansi bsa msuk akbid,, pa ujian tulisnya tetap sama', '2010-12-15 12:59:29', 1),
-(42, 0, 0, 0, 0, 1, 'Home page', 'Perusahaan', 'http://graph.facebook.com/100011328960689/picture', 'info@perusahaan.ac.id', '', '[ untuk alumni smk akuntansi bisa masuk apa tidak? ]\nOwh tentu saja bisa, perusahaan menerima semua jurusan untuk SMU atau sederajat.. :)', '2011-03-23 13:59:17', 1);
+(42, 0, 0, 0, 0, 1, 'Home page', 'Perusahaan', 'http://graph.facebook.com/100011328960689/picture', 'info@perusahaan.ac.id', '', '[ untuk alumni smk akuntansi bisa masuk apa tidak? ]\nOwh tentu saja bisa, perusahaan menerima semua jurusan untuk SMU atau sederajat.. :)', '2011-03-23 13:59:17', 1),
+(43, 36, 0, 0, 0, 35, 'Dermaga Batubara Terbesar', 'gofud gang', 'https://lh3.googleusercontent.com/a/ACg8ocJwwINYJvsGv0x2S-we0j5ph36j3Fxz5yhYfpR3VvJ9XA=s96-c', 'gofudgang@gmail.com', '', '@Tuti : iya', '2023-11-28 09:40:43', 1),
+(44, 0, 0, 0, 0, 38, 'Garuda Buka Rute Surabaya', 'gofud gang', 'https://lh3.googleusercontent.com/a/ACg8ocJwwINYJvsGv0x2S-we0j5ph36j3Fxz5yhYfpR3VvJ9XA=s96-c', 'gofudgang@gmail.com', '', 'halo', '2023-11-28 09:41:05', 1);
 
 -- --------------------------------------------------------
 
@@ -2044,7 +2058,8 @@ INSERT INTO `bbc_module` (`id`, `name`, `site_title`, `site_desc`, `site_keyword
 (9, 'survey', '', '', '', '2009-01-09 04:05:01', 0, ',all,', '', '', '', '', '', 0, 1),
 (10, 'testimonial', '', '', '', '2009-01-11 20:18:32', 0, ',all,', '', '', '', '', '', 0, 1),
 (11, 'imageslider', '', '', '', '2010-07-25 04:52:28', 0, ',all,', '', '', '', '', '', 0, 1),
-(12, 'tools', '', '', '', '2011-11-16 02:50:48', 0, ',all,', '', '', '', '', '', 0, 1);
+(12, 'tools', '', '', '', '2011-11-16 02:50:48', 0, ',all,', '', '', '', '', '', 0, 1),
+(13, 'medic', NULL, NULL, NULL, '2023-11-27 11:33:13', 0, ',all,', NULL, NULL, NULL, NULL, '', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -2100,7 +2115,7 @@ CREATE TABLE `bbc_user` (
 --
 
 INSERT INTO `bbc_user` (`id`, `group_ids`, `username`, `password`, `last_ip`, `last_ip_temp`, `last_login`, `last_login_temp`, `exp_checked`, `login_time`, `created`, `active`) VALUES
-(1, ',3,4,1,2,', 'admin', 'wh0Mcs9LgKTh52YN0wo2vcPP5MYfwI2PGdQkQdWD1B2bKtixm5wKWiTNNHBwn2yIDotDYtRO82x0BU+tDtzx+Q==', '::1', '::1', '2023-11-24 09:24:33', '2023-11-23 09:32:47', '2023-11-24 14:23:14', 43, '0000-00-00 00:00:00', 1),
+(1, ',3,4,1,2,', 'admin', 'wh0Mcs9LgKTh52YN0wo2vcPP5MYfwI2PGdQkQdWD1B2bKtixm5wKWiTNNHBwn2yIDotDYtRO82x0BU+tDtzx+Q==', '::1', '::1', '2023-11-29 12:11:00', '2023-11-28 09:41:40', '2023-11-29 14:27:06', 46, '0000-00-00 00:00:00', 1),
 (2, ',2,1,3,4,', 'danang@fisip.net', 'TgEUmC9hRFBWWgtQr+WJvgj+MRSNu1Lby9y4ixNtj4uSpm5jw6lF81z//hXRrRgraI0pi674xHoIjFPHv7qq6Q==', '127.0.0.1', '127.0.0.1', '2016-05-03 23:35:44', '2016-05-03 23:32:34', '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', 1);
 
 -- --------------------------------------------------------
@@ -2729,7 +2744,10 @@ CREATE TABLE `testimonial` (
 
 INSERT INTO `testimonial` (`id`, `name`, `email`, `params`, `message`, `date`, `publish`) VALUES
 (1, 'Danang Widiantoro', 'comment@fisip.net', 'a:2:{s:7:\"Company\";s:9:\"Fisip.Net\";s:7:\"Address\";s:35:\"Gowok Banguntapan Bantul Yogyakarta\";}', 'It is easy to navigate this site because all of the links are right there on the left hand side, and people without image-loading browsers can access the links via the text at the bottom which is very handy and essential for a good site. It is a good idea having a shopping cart section right in the middle of the screen because it is obvious, and all important information can be accessed by the reader easily.', '2012-04-22 03:00:40', 1),
-(2, 'Malaquina Aurelia Widiantoro', 'daloralove@yahoo.com', 'a:2:{s:7:\"Company\";s:17:\"www.bagikisah.com\";s:7:\"Address\";s:13:\"Denpasar Bali\";}', 'This site definitely appeals to the average person because the layout is so simple but very effective. It is a clean site with a flawless look, and someone without any technical background would definitely appreciate it. The layout makes anyone feel comfortable because it is so well done and clean looking. We feel as if we are in good hands and we know that we will be able to find anything we need on this site. Well done....', '2012-04-22 03:08:47', 1);
+(2, 'Malaquina Aurelia Widiantoro', 'daloralove@yahoo.com', 'a:2:{s:7:\"Company\";s:17:\"www.bagikisah.com\";s:7:\"Address\";s:13:\"Denpasar Bali\";}', 'This site definitely appeals to the average person because the layout is so simple but very effective. It is a clean site with a flawless look, and someone without any technical background would definitely appreciate it. The layout makes anyone feel comfortable because it is so well done and clean looking. We feel as if we are in good hands and we know that we will be able to find anything we need on this site. Well done....', '2012-04-22 03:08:47', 1),
+(3, 'gofud gang', 'gofudgang@gmail.com', '{\"Company\":\"esoftplay\",\"Address\":\"kudus\",\"image\":\"https://lh3.googleusercontent.com/a/ACg8ocJwwINYJvsGv0x2S-we0j5ph36j3Fxz5yhYfpR3VvJ9XA=s96-c\"}', 'keren sekali aku sehabis dari sini langsung jari dewa', '2023-11-28 10:18:59', 1),
+(9, 'gofud gang', 'gofudgang@gmail.com', '{\"Company\":\"esoftplay\",\"Address\":\"Kudus\"}', 'ga', '2023-11-29 12:25:57', 1),
+(8, 'gofud gang', 'gofudgang@gmail.com', '{\"Company\":\"esoftplay\",\"Address\":\"Kudus\"}', '???', '2023-11-29 12:22:12', 1);
 
 -- --------------------------------------------------------
 
@@ -3299,13 +3317,13 @@ ALTER TABLE `bbc_account_temp`
 -- AUTO_INCREMENT for table `bbc_alert`
 --
 ALTER TABLE `bbc_alert`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `bbc_block`
 --
 ALTER TABLE `bbc_block`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=178;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=183;
 
 --
 -- AUTO_INCREMENT for table `bbc_block_position`
@@ -3359,7 +3377,7 @@ ALTER TABLE `bbc_content_category`
 -- AUTO_INCREMENT for table `bbc_content_comment`
 --
 ALTER TABLE `bbc_content_comment`
-  MODIFY `id` int(255) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id` int(255) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT for table `bbc_content_registrant`
@@ -3449,7 +3467,7 @@ ALTER TABLE `bbc_menu_cat`
 -- AUTO_INCREMENT for table `bbc_module`
 --
 ALTER TABLE `bbc_module`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `bbc_template`
@@ -3575,7 +3593,7 @@ ALTER TABLE `survey_question_option`
 -- AUTO_INCREMENT for table `testimonial`
 --
 ALTER TABLE `testimonial`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `testimonial_field`

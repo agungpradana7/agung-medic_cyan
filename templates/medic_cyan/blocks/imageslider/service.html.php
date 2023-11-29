@@ -24,7 +24,7 @@ if ($count > 0) {
                 </a>
               </div>
               <div class="image-content text-center">
-                <span><?php echo lang('Better Service At Low Cost') ?></span>
+                <span><?php echo $dt['description'] ?></span>
                 <a href="service.html">
                   <h6><?php echo $dt['title'] ?></h6>
                 </a>

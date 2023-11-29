@@ -54,7 +54,25 @@
 
     <?php echo $sys->block_show('content_bottom'); ?>
 
-    <?php echo $sys->block_show('footer'); ?>
+    <footer class="footer-main">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <?php echo $sys->block_show('footer'); ?>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="footer-bottom">
+      <div class="container clearfix">
+        <div class="copyright-text">
+          <p>&copy; <?php echo config('site', 'footer') ?>
+            <a href="index.html"><?php echo lang('Medic') ?></a>
+          </p>
+        </div>
+      </div>
+    </div>
 
 
   </div>

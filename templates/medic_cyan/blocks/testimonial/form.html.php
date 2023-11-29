@@ -78,49 +78,85 @@
               <span><?php echo lang('Appointment') ?></span>
             </h3>
           </div>
-          <form name="contact_form" class="default-form contact-form" action="sendmail.php" method="post">
-            <div class="row">
-              <div class="col-md-6 col-sm-12 col-xs-12">
-                <div class="form-group">
-                  <input type="text" name="Name" placeholder="Name" required="">
-                </div>
-                <div class="form-group">
-                  <input type="email" name="Email" placeholder="Email" required="">
-                </div>
-                <div class="form-group">
-                  <select name="subject">
-                    <option><?php echo lang('Departments') ?></option>
-                    <option><?php echo lang('Diagnostic') ?></option>
-                    <option><?php echo lang('Psychological') ?></option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-md-6 col-sm-12 col-xs-12">
-                <div class="form-group">
-                  <input type="text" name="Phone" placeholder="Phone" required="">
-                </div>
-                <div class="form-group">
-                  <input type="text" name="Date" placeholder="Date" required="" id="datepicker">
-                  <i class="fa fa-calendar" aria-hidden="true"></i>
-                </div>
-                <div class="form-group">
-                  <select name="subject">
-                    <option><?php echo lang('Doctor') ?></option>
-                    <option><?php echo lang('Diagnostic') ?></option>
-                    <option><?php echo lang('Psychological') ?></option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="form-group">
-                  <textarea name="form_message" placeholder="Your Message" required=""></textarea>
-                </div>
-                <div class="form-group text-center">
-                  <button type="submit" class="btn-style-one"><?php echo lang('submit now') ?></button>
-                </div>
-              </div>
-            </div>
-          </form>
+          <?php
+          if (config('testimonial', 'avatar') == '1') {
+            $auth   = user_auth('You must validate your profile');
+          }
+          if (!$sys->menu_real) {
+            $sys->nav_change(lang('Testimonial'), 'testimonial');
+            $sys->nav_add(lang('Post Testimonial'));
+          }
+          $params = array(
+            'title'      => 'Use form below',
+            'table'      => 'testimonial',
+            'config_pre' => array(
+              'name' => array(
+                'text'      => 'Name',
+                'type'      => 'text',
+                'default'   => @$auth['name'],
+                'mandatory' => 1
+              )
+            ),
+            'config'      => $db->getAll("SELECT * FROM `testimonial_field` WHERE `active`=1 ORDER BY `orderby` ASC"),
+            'config_post' => array(
+              'email' => array(
+                'text'      => 'Email',
+                'type'      => 'text',
+                'default'   => @$auth['email'],
+                'mandatory' => 1
+              ),
+              'message' => array(
+                'text'      => 'Message',
+                'type'      => 'textarea',
+                'mandatory' => 1
+              ),
+              'vcode' => array(
+                'text' => 'Validation Code',
+                'type' => 'captcha'
+              )
+            ),
+            'name'      => 'params',
+            'id'        => 0,
+            'post_func' => '_send_mail'
+          );
+          $form = _class('params', $params);
+          $form->set_encode(false);
+          echo $form->show();
+
+          function _send_mail($form)
+          {
+            global $sys, $db, $Bbc, $auth;
+            $conf   = get_config('testimonial', 'testimonial');
+            $q      = "SELECT * FROM $form->table WHERE id=$form->table_id";
+            $data   = $db->getRow($q);
+            $arr    = config_decode($data['params']);
+            $params = array_merge($data, $arr);
+            if (!empty($auth)) {
+              $arr['image'] = $auth['image'];
+              $add_sql      = ', `params`=\'' . json_encode($arr) . '\'';
+            } else {
+              $add_sql = '';
+            }
+
+            $q    = "UPDATE $form->table SET `date`=NOW(){$add_sql}, publish=" . @intval($conf['approved']) . " WHERE id=$form->table_id";
+            $db->Execute($q);
+            unset($params['id'], $params['date'], $params['publish'], $params['params']);
+            if ($conf['alert']) {
+              $d = 'User Profile :';
+              foreach ($params as $key => $value) {
+                $d .= "\n" . $key . ' : ' . $value;
+              }
+              $params['detail'] = $d;
+              $email = is_email($conf['email']) ? $conf['email'] : config('email', 'address');
+              $to = array($data['email'], $email);
+              $sys->mail_send($to, 'testimonial', $params);
+            }
+            $message = $sys->text_replace(lang('finished'));
+            $_SESSION['testimonial'] = $message;
+            redirect($Bbc->mod['circuit'] . '.form-finished');
+          }
+          ?>
+          
         </div>
       </div>
     </div>
