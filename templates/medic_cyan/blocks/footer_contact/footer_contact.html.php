@@ -22,12 +22,12 @@
         } else {
           $icon = 'fa-map-marker';
         }
-      ?>
+        ?>
         <li class="item">
           <i class="fa <?php echo $icon ?>"></i>
           <p><?php echo $links ?></p>
         </li>
-      <?php
+        <?php
       }
       ?>
     </ul>

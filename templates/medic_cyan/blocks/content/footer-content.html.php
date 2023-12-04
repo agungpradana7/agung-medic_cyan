@@ -13,12 +13,12 @@ if (!empty($cat['list']) && is_array($cat['list'])) {
           <li class="item">
             <div class="media">
               <div class="media-left">
-                <a href="#">
-                  <img class="media-object" src="<?php echo $data['image'] ?>" style="width: 90px; height: 90px;" alt="post-thumb">
+                <a href="<?php echo content_link($data['id'], $data['title']) ?>">
+                  <img class="media-object" src="<?php echo content_src($data['image'], false, false) ?>" style="width: 90px; height: 90px;" alt="post-thumb">
                 </a>
               </div>
               <div class="media-body">
-                <h4 class="media-heading"><a href="#"><?php echo $data['title'] ?></a></h4>
+                <h4 class="media-heading"><a href="<?php echo content_link($data['id'], $data['title']) ?>"><?php echo $data['title'] ?></a></h4>
                 <p><?php echo $content ?></p>
               </div>
             </div>

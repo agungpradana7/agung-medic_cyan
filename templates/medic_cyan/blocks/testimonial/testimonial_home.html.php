@@ -19,7 +19,7 @@ if (!empty($output['data']) && is_array($output['data'])) {
               <div class="inner-box text-center">
                 <div class="image-box">
                   <figure>
-                    <img style="background-image: url(<?php echo $match[1] ?>" alt="">
+                    <img src="<?php echo 'https://gravatar.com/avatar/' . md5($data['email']) ?>" alt="">
                   </figure>
                 </div>
                 <h6><?php echo $data['name'] ?></h6>

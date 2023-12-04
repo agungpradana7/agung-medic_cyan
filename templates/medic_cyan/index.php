@@ -28,29 +28,11 @@
       </div>
     </section>
 
-
-
-
     <?php echo $sys->block_show('top'); ?>
-
-
 
     <?php echo $sys->block_show('content_top'); ?>
 
-
-    <section class="cta">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="cta-block">
-              <div class="top-doctor item">
-                <?php echo trim($Bbc->content); ?>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <?php echo trim($Bbc->content); ?>
 
     <?php echo $sys->block_show('content_bottom'); ?>
 
@@ -73,8 +55,6 @@
         </div>
       </div>
     </div>
-
-
   </div>
   <!--End pagewrapper-->
 
